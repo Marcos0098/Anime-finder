@@ -1,0 +1,70 @@
+.App{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(148, 148, 148);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  padding: 3% 0;
+  color: rgb(49, 49, 49);
+  font-size: 32px;
+}
+
+.header strong{
+  color: black;
+}
+
+.container-main{
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sidebar{
+  display: inline-block;
+  vertical-align: top;
+  height:auto;
+  width: 15%;
+  overflow: auto;
+  background-color: violet;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+}
+
+.main-content{
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 75%;
+  margin-right: 5%;
+  overflow: auto;
+}
+
+.anime-card{
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+  margin-bottom: 20px;
+  background-color: #313131;
+  border-top: 6px solid #F29C12;
+  border-radius: 19px;
+}
+
+.anime-card img{
+  border-radius: 18px;
+}
+
+.anime-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-info p{
+  padding: 20px;
+  font-size: 24px;
+  border-top: 1px solid #F29C12;
+  color: white;
+}
