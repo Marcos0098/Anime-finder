@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import Header from "./components/Header";
 import SideBar from './components/SideBar';
 import AnimeCard from "./components/AnimeCard";
-
 import './App.css';
 
 
@@ -17,7 +16,6 @@ function App() {
     setTopAnimes(data.data);
   };
 
-  console.log(topAnimes)
 
   useEffect(() => {
     const animeNews = "https://api.jikan.moe/v4/top/anime"

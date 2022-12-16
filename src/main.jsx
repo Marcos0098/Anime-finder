@@ -1,10 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom' 
+
+
 import App from './App'
+import Anime from './pages/Anime';
+import Search from './pages/Search';
+
+
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route element={ <App /> }>
+            <Route path = "/" element = { <App/> }/>
+            <Route path = "anime/:id" element = { <Anime/> }/>
+            <Route path = "search/" element = { <Search/> }/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>,
 )
