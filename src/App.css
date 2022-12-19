@@ -1,9 +1,13 @@
+
+/*geral*/
 .App{
   width: 100%;
   height: 100%;
   background-color: rgb(36, 33, 47);
 }
+/*geral*/
 
+/*Header*/
 .header{
   display: flex;
   padding: 2% 0;
@@ -69,7 +73,9 @@
   background-color: transparent;
   color: #fff;
 }
+/*Header*/
 
+/*Home-Page&&Side-Bar*/
 .container-main{
   display: flex;
   height: 100%;
@@ -96,9 +102,12 @@
   margin-right: 5%;
   overflow: auto;
 }
+/*Home-Page&&Side-Bar*/
 
+/*AnimeCard*/
 .anime-card{
   display: flex;
+  position: relative;
   width: 100%;
   max-height: 200px;
   margin-bottom: 20px;
@@ -122,3 +131,51 @@
   border-top: 1px solid #F29C12;
   color: white;
 }
+
+.button-details a{
+
+
+}
+.button-details a:before{
+  content: '+';
+  width: 3%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 30px;
+  color:#313131;
+  background-color: #F29C12;
+  transition: .6s;
+}
+
+.button-details a:hover:before{
+  display: flex;
+  flex-wrap: nowrap;
+  content: '+ Detalhes';
+  font-size: 20px;
+  width: 10%;
+}
+/*AnimeCard*/
+
+/*Search*/
+.search-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.title span{
+  color: #F29C12;
+  font-style: italic;
+}
+/*Search*/

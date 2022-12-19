@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import {FaStar} from "react-icons/fa"
+import { BsPlusLg } from "react-icons/bs"
 
-function AnimeCard({anime}) {
+function AnimeCard({anime, showLink = true}) {
+
   return (
 
     <div className='anime-card'>
@@ -12,7 +15,11 @@ function AnimeCard({anime}) {
             <p>Rating: {anime.score} <FaStar/></p>
             <p>Episodes: {anime.episodes}</p>
         </div>
-        
+        <div className="button-details">
+          {showLink && <Link to={`/anime/${anime.mal_id}`}></Link>}
+        </div>
+
+
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import AnimeCard from '../components/AnimeCard';
 
 import "../App.css";
+
 function Search() {
   const [searchParams] = useSearchParams();
   const [animes, setAnimes] = useState([]);
@@ -14,13 +15,12 @@ function Search() {
     const res = await fetch(url);
     const data = await res.json();
 
-    setAnimes(data.results);
-    console.log(data.results);
+    setAnimes(data.data);
+    console.log(data)
   };
 
-  console.log(query)
   useEffect(() => {
-    const searchUrl = "https://api.jikan.moe/v4/anime";
+    const searchUrl = `https://api.jikan.moe/v4/anime?q=${query}&order_by=score&sort=desc&limit=10`;
 
     getSearcherdAnime(searchUrl)
   },[query])
@@ -32,7 +32,7 @@ function Search() {
       </div>
       <div className='anime-container'>
         {animes.length === 0 && <p>Carregando ...</p>}
-        {animes.length > 0 && animes.map((anime) => <AnimeCard key={animes.id} anime={anime} />)}
+        {animes.length > 0 && animes.map((anime) => <AnimeCard key={anime.id} anime={anime} />)}
       </div>
     </div>
   )
