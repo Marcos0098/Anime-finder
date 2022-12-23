@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import {FaStar} from "react-icons/fa"
-import { BsPlusLg } from "react-icons/bs"
 
 function AnimeCard({anime, showLink = true}) {
 

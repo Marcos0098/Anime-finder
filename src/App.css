@@ -108,7 +108,7 @@
 .anime-card{
   display: flex;
   position: relative;
-  width: 100%;
+  width: 73.8vw;
   max-height: 200px;
   margin-bottom: 20px;
   background-color: #313131;
@@ -132,33 +132,32 @@
   color: white;
 }
 
-.button-details a{
 
-
-}
-.button-details a:before{
-  content: '+';
+.button-details a::before{
+  content: "+";
+  font-size: 28px;
+  color:#313131;
+  font-weight: 700;
+  overflow: hidden;
   width: 3%;
   height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
   right: 0;
   border-radius: 0px 10px 10px 0px;
-  font-size: 30px;
-  color:#313131;
   background-color: #F29C12;
   transition: .6s;
+  text-decoration: none;
 }
 
 .button-details a:hover:before{
-  display: flex;
-  flex-wrap: nowrap;
-  content: '+ Detalhes';
-  font-size: 20px;
   width: 10%;
+  content: "+Details";
 }
+
 /*AnimeCard*/
 
 /*Search*/
