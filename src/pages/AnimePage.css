@@ -1,0 +1,46 @@
+.anime-container{
+    height: 76vh;
+}
+
+.anime-infos{
+    display: flex;
+    gap: 30px;
+    margin: 5%;
+}
+
+.anime-infos img{
+    width: 30%;
+}
+
+.titulo-tag{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.anime-infos h2{
+    color: #F29C12;
+    font-size: 40px;
+}
+
+.anime-infos h4{
+    font-size: 25px;
+    color:cadetblue;
+}
+
+.anime-infos p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.trailer{
+    width: 40%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+

@@ -78,7 +78,6 @@
 /*Home-Page&&Side-Bar*/
 .container-main{
   display: flex;
-  height: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -162,6 +161,7 @@
 
 /*Search*/
 .search-container{
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
