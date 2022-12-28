@@ -1,29 +1,37 @@
 import {useState, useEffect} from 'react'
-import SideBar from '../components/SideBar';
 import AnimeCard from "../components/AnimeCard";
 
 import '../App.css';
 
 function Home() {
     const [topAnimes, setTopAnimes] = useState([])
+    const [animeGenre, setAnimeGenre] = useState([])
+    const nameGenre = [];
 
-    const getAnimeNews = async (url) =>{
+
+
+    const getAnimeNews = async (url, urlGenre) =>{
 
       const res = await fetch(url)
+
       const data = await res.json();
-      
+
       setTopAnimes(data.data);
     };
 
     useEffect(() => {
-      const animeNews = "https://api.jikan.moe/v4/top/anime?limit=10";
+      const animeNews = "https://api.jikan.moe/v4/top/anime?limit=5";
+
 
       getAnimeNews(animeNews)
-    },[])
-  
-    console.log(topAnimes)
+    },[]);
+
+
+
+
   return (
     <div className='container-main'>
+
       {topAnimes && 
       <>
         <div className='main-content'>
